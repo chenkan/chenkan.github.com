@@ -19,4 +19,4 @@ categories: 00-杂谈
 1. 如何知道了`octopress`这玩意 [传送门](http://www.v2ex.com/t/51573#reply24)
 2. `octopress`官网指南 [传送门](http://octopress.org/)
 3. `octopress`简单使用，内容类似官网指南，但更具体一些 [传送门](http://tanqisen.github.com/blog/2012/12/27/github-plus-octopressda-jian-mian-fei-blog/)
-4. 如何使`octopress`支持文章中文分类 [传送门](http://khaos.github.com/blog/2012/12/06/using-chinese-category-tags-in-octopress/)
+4. 如何使`octopress`支持中文分类标签 [传送门](http://khaos.github.com/blog/2012/12/06/using-chinese-category-tags-in-octopress/)
