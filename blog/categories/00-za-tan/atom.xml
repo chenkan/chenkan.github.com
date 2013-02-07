@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 00-杂谈 | 世界的瞭望哨]]></title>
+  <link href="http://chenkan.github.com/blog/categories/00-za-tan/atom.xml" rel="self"/>
+  <link href="http://chenkan.github.com/"/>
+  <updated>2013-02-08T00:14:03+08:00</updated>
+  <id>http://chenkan.github.com/</id>
+  <author>
+    <name><![CDATA[ChenKan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[新博启用]]></title>
+    <link href="http://chenkan.github.com/blog/2013/02/07/xin-bo-qi-yong/"/>
+    <updated>2013-02-07T16:09:00+08:00</updated>
+    <id>http://chenkan.github.com/blog/2013/02/07/xin-bo-qi-yong</id>
+    <content type="html"><![CDATA[<p>由于<a href="http://ckbsc.blog.163.com/">原博客</a>在功能和形式上都不能很好符合我的需求，再加上我爱折腾的怪癖，终于决定启用此博客</p>
+
+<p>本博客立志于</p>
+
+<blockquote><p>认识自己 认识世界</p></blockquote>
+
+<p>但在达成这一宏愿之前，将主要发布与我当前职业（一名有态度，爱折腾的QA）相关的文章</p>
+
+<p>本博客依托于<a href="github.com">Github</a>，使用<a href="octopress.org">octopress</a>搭建博客，期间参考了</p>
+
+<ol>
+<li>如何知道了<code>octopress</code>这玩意 <a href="http://www.v2ex.com/t/51573#reply24">传送门</a></li>
+<li><code>octopress</code>官网指南 <a href="http://octopress.org/">传送门</a></li>
+<li><code>octopress</code>简单使用，内容类似官网指南，但更具体一些 <a href="http://tanqisen.github.com/blog/2012/12/27/github-plus-octopressda-jian-mian-fei-blog/">传送门</a></li>
+<li>如何使<code>octopress</code>支持中文分类标签 <a href="http://khaos.github.com/blog/2012/12/06/using-chinese-category-tags-in-octopress/">传送门</a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>
