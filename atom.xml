@@ -4,7 +4,7 @@
   <title><![CDATA[世界的瞭望哨]]></title>
   <link href="http://chenkan.github.com/atom.xml" rel="self"/>
   <link href="http://chenkan.github.com/"/>
-  <updated>2013-02-20T22:46:09+08:00</updated>
+  <updated>2013-02-21T23:34:40+08:00</updated>
   <id>http://chenkan.github.com/</id>
   <author>
     <name><![CDATA[ChenKan]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[瓜熟才可蒂落]]></title>
+    <link href="http://chenkan.github.com/blog/2013/02/21/gua-shou-di-luo/"/>
+    <updated>2013-02-21T22:56:00+08:00</updated>
+    <id>http://chenkan.github.com/blog/2013/02/21/gua-shou-di-luo</id>
+    <content type="html"><![CDATA[<p>本文算是最近工作中的一些感悟与吐槽</p>
+
+<p>话说本人是互联网行业QA一枚，精确一点叫<code>测试开发</code>，测试中的开发（很遗憾不是战斗机==！）</p>
+
+<p>也许大家在用脚本执行测试，在用Jenkins执行自动用例，在用testlink管理用例，在用JIRA管理Bug，etc。但终有一天，随着业务的发展，一个集中而不失灵活，强大而不失轻巧的<code>（测试）平台</code>必将出现。我相信，这样一个平台，可以而且应该：</p>
+
+<ol>
+<li>符合本公司/部门的业务与流程，接地气</li>
+<li>可以统括大家的日常（至少是测试相关）工作，并切实有效提升工作效率，而不是可有可无的鸡肋，甚至无疾而终的累赘</li>
+<li>由我们自主开发，既可以随时随地改进平台符合需求，又可以锻炼队伍，提升能力</li>
+</ol>
+
+
+<p>从功能上讲，可以大致分为：</p>
+
+<ol>
+<li>帮助大家更好的管理和执行测试</li>
+<li>展现与提炼测试过程与结果</li>
+</ol>
+
+
+<p>前者对于测试人员更实用，同时可以产出更多的测试内容供后者展现；后者领导会更关注（领导重视确实重要==！），同时也有助于测试人员改进测试</p>
+
+<p>孰轻孰重，在资源与经验不足的情况下如何协调？</p>
+
+<p>以上是感悟，以下是<code>吐槽</code></p>
+
+<ol>
+<li>瓜不熟不落，与其强扭，不如耐心培育若干好苗子，积攒经验，同时做好调研与技术预研，期待后期发力</li>
+<li>一群人每周开一次会研讨，不如一个人全职跟进</li>
+</ol>
+
+
+<p>以上是吐槽，以下是<code>结论</code></p>
+
+<p>服从组织安排，保留个人意见</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby学习系列 - 基础知识 - Array]]></title>
