@@ -95,9 +95,11 @@ function flashVideoFallback(){
 function wrapFlashVideos() {
   $('object').each(function(object) {
     object = $(object);
-    if ( $('param[name=movie]', object).length ) {
-      var wrapper = object.before('<div class="flash-video"><div>').previous();
-      $(wrapper).children().append(object);
+    if (object.attr('id') != "JIATHISSWF") {
+      if ( $('param[name=movie]', object).length ) {
+        var wrapper = object.before('<div class="flash-video"><div>').previous();
+        $(wrapper).children().append(object);
+      }
     }
   });
   $('iframe[src*=vimeo],iframe[src*=youtube]').each(function(iframe) {
