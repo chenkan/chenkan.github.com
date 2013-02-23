@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 51-Ruby | 世界的瞭望哨]]></title>
   <link href="http://chenkan.github.com/blog/categories/51-ruby/atom.xml" rel="self"/>
   <link href="http://chenkan.github.com/"/>
-  <updated>2013-02-23T22:17:21+08:00</updated>
+  <updated>2013-02-23T23:04:45+08:00</updated>
   <id>http://chenkan.github.com/</id>
   <author>
     <name><![CDATA[ChenKan]]></name>
@@ -24,7 +24,7 @@
 
 <h3>赋值</h3>
 
-<p><code>
+<p><code>ruby
 h = { "a" =&gt; 100, "b" =&gt; 200 }
 h["a"] = 9
 h["c"] = 4
@@ -140,7 +140,7 @@ h.each_value {|value| puts value }
     <id>http://chenkan.github.com/blog/2013/02/20/ruby-study-array</id>
     <content type="html"><![CDATA[<h3>序言</h3>
 
-<p>本着赶鸭子上架及边学边做的精神，总也算是写了好一些Ruby代码；但回过头来发现自己的进步不大，写代码还是很生涩，不上道，经常在基础知识上摔跟头</p>
+<p>本着赶鸭子上架及边学边做的精神，总也算是写了好一些Ruby代码；但回过头来发现自己的进步不大，写代码还是很生涩，不上道，多次在基础知识上摔跟头</p>
 
 <p>新的一年开始了，希望自己能够扎实掌握Ruby这项技能，从基础开始，梳理一些知识点</p>
 
@@ -150,7 +150,7 @@ h.each_value {|value| puts value }
 
 <p>If multiple copies are what you want, you should use the block version which uses the result of that block each time an element of the array needs to be initialized:</p>
 
-<p><code>
+<p><code>ruby
 a = Array.new(2) { Hash.new }
 a[0]['cat'] = 'feline'
 a # =&gt; [{"cat"=&gt;"feline"}, {}]

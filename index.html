@@ -13,10 +13,9 @@
 2
 3
 4
-h = { "a" =&gt; 100, "b" =&gt; 200 }
-h["a"] = 9
-h["c"] = 4
-h #=&gt; {"a"=&gt;9, "b"=&gt;200, "c &hellip;">
+h = { &quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200 }
+h[&quot;a&quot;] = 9
+h[&quot;c&quot;] = &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -118,148 +117,164 @@ h #=&gt; {"a"=&gt;9, "b"=&gt;200, "c &hellip;">
 
 <h3>赋值</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
-</span><span class='line'>h["a"] = 9
-</span><span class='line'>h["c"] = 4
-</span><span class='line'>h   #=&gt; {"a"=&gt;9, "b"=&gt;200, "c"=&gt;4}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">200</span> <span class="p">}</span>
+</span><span class='line'><span class="n">h</span><span class="o">[</span><span class="s2">&quot;a&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="mi">9</span>
+</span><span class='line'><span class="n">h</span><span class="o">[</span><span class="s2">&quot;c&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="mi">4</span>
+</span><span class='line'><span class="n">h</span>   <span class="c1">#=&gt; {&quot;a&quot;=&gt;9, &quot;b&quot;=&gt;200, &quot;c&quot;=&gt;4}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>取值</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
-</span><span class='line'>h["a"]   #=&gt; 100
-</span><span class='line'>h["c"]   #=&gt; nil</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">200</span> <span class="p">}</span>
+</span><span class='line'><span class="n">h</span><span class="o">[</span><span class="s2">&quot;a&quot;</span><span class="o">]</span>   <span class="c1">#=&gt; 100</span>
+</span><span class='line'><span class="n">h</span><span class="o">[</span><span class="s2">&quot;c&quot;</span><span class="o">]</span>   <span class="c1">#=&gt; nil</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200, "c" =&gt; 300, "d" =&gt; 300 }
-</span><span class='line'>h.key(200)   #=&gt; "b"
-</span><span class='line'>h.key(300)   #=&gt; "c"
-</span><span class='line'>h.key(999)   #=&gt; nil</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">200</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">=&gt;</span> <span class="mi">300</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span> <span class="o">=&gt;</span> <span class="mi">300</span> <span class="p">}</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">key</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>   <span class="c1">#=&gt; &quot;b&quot;</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">key</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>   <span class="c1">#=&gt; &quot;c&quot;</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">key</span><span class="p">(</span><span class="mi">999</span><span class="p">)</span>   <span class="c1">#=&gt; nil</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>运算</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>h1 = { "a" =&gt; 100, "b" =&gt; 200 }
-</span><span class='line'>h2 = { "b" =&gt; 254, "c" =&gt; 300 }
-</span><span class='line'>h1.merge(h2)   #=&gt; {"a"=&gt;100, "b"=&gt;254, "c"=&gt;300}
-</span><span class='line'>h1.merge(h2){|key, old_val, new_val| new_val - old_val}
-</span><span class='line'>               #=&gt; {"a"=&gt;100, "b"=&gt;54,  "c"=&gt;300}
-</span><span class='line'>h1             #=&gt; {"a"=&gt;100, "b"=&gt;200}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h1</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">200</span> <span class="p">}</span>
+</span><span class='line'><span class="n">h2</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">254</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">=&gt;</span> <span class="mi">300</span> <span class="p">}</span>
+</span><span class='line'><span class="n">h1</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">h2</span><span class="p">)</span>   <span class="c1">#=&gt; {&quot;a&quot;=&gt;100, &quot;b&quot;=&gt;254, &quot;c&quot;=&gt;300}</span>
+</span><span class='line'><span class="n">h1</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">h2</span><span class="p">){</span><span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">old_val</span><span class="p">,</span> <span class="n">new_val</span><span class="o">|</span> <span class="n">new_val</span> <span class="o">-</span> <span class="n">old_val</span><span class="p">}</span>
+</span><span class='line'>               <span class="c1">#=&gt; {&quot;a&quot;=&gt;100, &quot;b&quot;=&gt;54,  &quot;c&quot;=&gt;300}</span>
+</span><span class='line'><span class="n">h1</span>             <span class="c1">#=&gt; {&quot;a&quot;=&gt;100, &quot;b&quot;=&gt;200}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>增减</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
-</span><span class='line'>h.delete("a")                              #=&gt; 100
-</span><span class='line'>h.delete("z")                              #=&gt; nil</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">200</span> <span class="p">}</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>                              <span class="c1">#=&gt; 100</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span>                              <span class="c1">#=&gt; nil</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200, "c" =&gt; 300 }
-</span><span class='line'>h.delete_if {|key, value| key &gt;= "b" }   #=&gt; {"a"=&gt;100}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">200</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">=&gt;</span> <span class="mi">300</span> <span class="p">}</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">delete_if</span> <span class="p">{</span><span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">|</span> <span class="n">key</span> <span class="o">&gt;=</span> <span class="s2">&quot;b&quot;</span> <span class="p">}</span>   <span class="c1">#=&gt; {&quot;a&quot;=&gt;100}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p><code>reject!</code> is equivalent to <code>Hash#delete_if</code>, but returns <code>nil</code> if no changes were made.</p>
 
 <h3>统计与查询</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>{}.empty?   #=&gt; true</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="p">{}</span><span class="o">.</span><span class="n">empty?</span>   <span class="c1">#=&gt; true</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
-</span><span class='line'>h.has_key?("a")   #=&gt; true
-</span><span class='line'>h.has_key?("z")   #=&gt; false</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">200</span> <span class="p">}</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">has_key?</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>   <span class="c1">#=&gt; true</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">has_key?</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span>   <span class="c1">#=&gt; false</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
-</span><span class='line'>h.has_value?(100)   #=&gt; true
-</span><span class='line'>h.has_value?(999)   #=&gt; false</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">200</span> <span class="p">}</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">has_value?</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>   <span class="c1">#=&gt; true</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">has_value?</span><span class="p">(</span><span class="mi">999</span><span class="p">)</span>   <span class="c1">#=&gt; false</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200, "c" =&gt; 300, "d" =&gt; 400 }
-</span><span class='line'>h.keys   #=&gt; ["a", "b", "c", "d"]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">200</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">=&gt;</span> <span class="mi">300</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span> <span class="o">=&gt;</span> <span class="mi">400</span> <span class="p">}</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">keys</span>   <span class="c1">#=&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200, "c" =&gt; 300 }
-</span><span class='line'>h.values   #=&gt; [100, 200, 300]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">200</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">=&gt;</span> <span class="mi">300</span> <span class="p">}</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">values</span>   <span class="c1">#=&gt; [100, 200, 300]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "d" =&gt; 100, "a" =&gt; 200, "v" =&gt; 300, "e" =&gt; 400 }
-</span><span class='line'>h.length        #=&gt; 4
-</span><span class='line'>h.delete("a")   #=&gt; 200
-</span><span class='line'>h.length        #=&gt; 3</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;d&quot;</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">200</span><span class="p">,</span> <span class="s2">&quot;v&quot;</span> <span class="o">=&gt;</span> <span class="mi">300</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span> <span class="o">=&gt;</span> <span class="mi">400</span> <span class="p">}</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">length</span>        <span class="c1">#=&gt; 4</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>   <span class="c1">#=&gt; 200</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">length</span>        <span class="c1">#=&gt; 3</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200, "c" =&gt; 300 }
-</span><span class='line'>h.select {|k,v| k &gt; "a"}  #=&gt; {"b" =&gt; 200, "c" =&gt; 300}
-</span><span class='line'>h.select {|k,v| v &lt; 200}  #=&gt; {"a" =&gt; 100}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">200</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">=&gt;</span> <span class="mi">300</span> <span class="p">}</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span><span class="o">|</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="o">|</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="s2">&quot;a&quot;</span><span class="p">}</span>  <span class="c1">#=&gt; {&quot;b&quot; =&gt; 200, &quot;c&quot; =&gt; 300}</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span><span class="o">|</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="o">|</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="mi">200</span><span class="p">}</span>  <span class="c1">#=&gt; {&quot;a&quot; =&gt; 100}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>其它</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
-</span><span class='line'>h.each {|key, value| puts "#{key} is #{value}" }</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">200</span> <span class="p">}</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">key</span><span class="si">}</span><span class="s2"> is </span><span class="si">#{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
-</span><span class='line'>h.each_key {|key| puts key }</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">200</span> <span class="p">}</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">each_key</span> <span class="p">{</span><span class="o">|</span><span class="n">key</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">key</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
-</span><span class='line'>h.each_value {|value| puts value }</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="mi">200</span> <span class="p">}</span>
+</span><span class='line'><span class="n">h</span><span class="o">.</span><span class="n">each_value</span> <span class="p">{</span><span class="o">|</span><span class="n">value</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">value</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>小结</h3>
@@ -373,7 +388,7 @@ h #=&gt; {"a"=&gt;9, "b"=&gt;200, "c &hellip;">
 
   <div class="entry-content"><h3>序言</h3>
 
-<p>本着赶鸭子上架及边学边做的精神，总也算是写了好一些Ruby代码；但回过头来发现自己的进步不大，写代码还是很生涩，不上道，经常在基础知识上摔跟头</p>
+<p>本着赶鸭子上架及边学边做的精神，总也算是写了好一些Ruby代码；但回过头来发现自己的进步不大，写代码还是很生涩，不上道，多次在基础知识上摔跟头</p>
 
 <p>新的一年开始了，希望自己能够扎实掌握Ruby这项技能，从基础开始，梳理一些知识点</p>
 
@@ -383,17 +398,18 @@ h #=&gt; {"a"=&gt;9, "b"=&gt;200, "c &hellip;">
 
 <p>If multiple copies are what you want, you should use the block version which uses the result of that block each time an element of the array needs to be initialized:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = Array.new(2) { Hash.new }
-</span><span class='line'>a[0]['cat'] = 'feline'
-</span><span class='line'>a # =&gt; [{"cat"=&gt;"feline"}, {}]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="p">{</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span> <span class="p">}</span>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="s1">&#39;cat&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;feline&#39;</span>
+</span><span class='line'><span class="n">a</span> <span class="c1"># =&gt; [{&quot;cat&quot;=&gt;&quot;feline&quot;}, {}]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>赋值</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -402,309 +418,342 @@ h #=&gt; {"a"=&gt;9, "b"=&gt;200, "c &hellip;">
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = Array.new
-</span><span class='line'>a[4] = "4";                 #=&gt; [nil, nil, nil, nil, "4"]
-</span><span class='line'>a[0, 3] = [ 'a', 'b', 'c' ] #=&gt; ["a", "b", "c", nil, "4"]
-</span><span class='line'>a[1..2] = [ 1, 2 ]          #=&gt; ["a", 1, 2, nil, "4"]
-</span><span class='line'>a[0, 2] = "?"               #=&gt; ["?", 2, nil, "4"]
-</span><span class='line'>a[0..2] = "A"               #=&gt; ["A", "4"]
-</span><span class='line'>a[-1]   = "Z"               #=&gt; ["A", "Z"]
-</span><span class='line'>a[1..-1] = nil              #=&gt; ["A", nil]
-</span><span class='line'>a[1..-1] = []               #=&gt; ["A"]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">new</span>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;4&quot;</span><span class="p">;</span>                 <span class="c1">#=&gt; [nil, nil, nil, nil, &quot;4&quot;]</span>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="o">]</span> <span class="o">=</span> <span class="o">[</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span> <span class="o">]</span> <span class="c1">#=&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, nil, &quot;4&quot;]</span>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="o">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="o">]</span>          <span class="c1">#=&gt; [&quot;a&quot;, 1, 2, nil, &quot;4&quot;]</span>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;?&quot;</span>               <span class="c1">#=&gt; [&quot;?&quot;, 2, nil, &quot;4&quot;]</span>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">.</span><span class="n">.</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span>               <span class="c1">#=&gt; [&quot;A&quot;, &quot;4&quot;]</span>
+</span><span class='line'><span class="n">a</span><span class="o">[-</span><span class="mi">1</span><span class="o">]</span>   <span class="o">=</span> <span class="s2">&quot;Z&quot;</span>               <span class="c1">#=&gt; [&quot;A&quot;, &quot;Z&quot;]</span>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="kp">nil</span>              <span class="c1">#=&gt; [&quot;A&quot;, nil]</span>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="o">[]</span>               <span class="c1">#=&gt; [&quot;A&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>取值</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "a", "b", "c", "d", "e" ]
-</span><span class='line'>a[1, 2]                #=&gt; [ "b", "c" ]
-</span><span class='line'>a[1..3]                #=&gt; [ "b", "c", "d" ]
-</span><span class='line'>a[-3, 3]               #=&gt; [ "c", "d", "e" ]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="o">]</span>                <span class="c1">#=&gt; [ &quot;b&quot;, &quot;c&quot; ]</span>
+</span><span class='line'><span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">3</span><span class="o">]</span>                <span class="c1">#=&gt; [ &quot;b&quot;, &quot;c&quot;, &quot;d&quot; ]</span>
+</span><span class='line'><span class="n">a</span><span class="o">[-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="o">]</span>               <span class="c1">#=&gt; [ &quot;c&quot;, &quot;d&quot;, &quot;e&quot; ]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "q", "r", "s", "t" ]
-</span><span class='line'>a.first     #=&gt; "q"
-</span><span class='line'>a.first(2)  #=&gt; ["q", "r"]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;q&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;t&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">first</span>     <span class="c1">#=&gt; &quot;q&quot;</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">first</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1">#=&gt; [&quot;q&quot;, &quot;r&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "w", "x", "y", "z" ]
-</span><span class='line'>a.last     #=&gt; "z"
-</span><span class='line'>a.last(2)  #=&gt; ["y", "z"]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="s2">&quot;z&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">last</span>     <span class="c1">#=&gt; &quot;z&quot;</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">last</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1">#=&gt; [&quot;y&quot;, &quot;z&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>运算</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[ 1, 2, 3 ] + [ 4, 5 ]    #=&gt; [ 1, 2, 3, 4, 5 ]
-</span><span class='line'>[ 1, 1, 2, 2, 3, 3, 4, 5 ] - [ 1, 2, 4 ]  #=&gt;  [ 3, 3, 5 ]
-</span><span class='line'>[ 1, 2, 3 ] * 3    #=&gt; [ 1, 2, 3, 1, 2, 3, 1, 2, 3 ]
-</span><span class='line'>[ 1, 1, 3, 5 ] & [ 1, 2, 3 ]   #=&gt; [ 1, 3 ]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="o">]</span> <span class="o">+</span> <span class="o">[</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="o">]</span>    <span class="c1">#=&gt; [ 1, 2, 3, 4, 5 ]</span>
+</span><span class='line'><span class="o">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="o">]</span> <span class="o">-</span> <span class="o">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span> <span class="o">]</span>  <span class="c1">#=&gt;  [ 3, 3, 5 ]</span>
+</span><span class='line'><span class="o">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="o">]</span> <span class="o">*</span> <span class="mi">3</span>    <span class="c1">#=&gt; [ 1, 2, 3, 1, 2, 3, 1, 2, 3 ]</span>
+</span><span class='line'><span class="o">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span> <span class="o">]</span> <span class="o">&amp;</span> <span class="o">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="o">]</span>   <span class="c1">#=&gt; [ 1, 3 ]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>增减</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[ 1, 2 ] &lt;&lt; "c" &lt;&lt; "d" &lt;&lt; [ 3, 4 ] #=&gt;  [ 1, 2, "c", "d", [ 3, 4 ] ]</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="o">]</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;c&quot;</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;d&quot;</span> <span class="o">&lt;&lt;</span> <span class="o">[</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span> <span class="o">]</span> <span class="c1">#=&gt;  [ 1, 2, &quot;c&quot;, &quot;d&quot;, [ 3, 4 ] ]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "a", "b", "b", "b", "c" ]
-</span><span class='line'>a.delete("b")                   #=&gt; "b"</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>                   <span class="c1">#=&gt; &quot;b&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = %w( ant bat cat dog )
-</span><span class='line'>a.delete_at(2)    #=&gt; "cat"
-</span><span class='line'>a                 #=&gt; ["ant", "bat", "dog"]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="sx">%w( ant bat cat dog )</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">delete_at</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>    <span class="c1">#=&gt; &quot;cat&quot;</span>
+</span><span class='line'><span class="n">a</span>                 <span class="c1">#=&gt; [&quot;ant&quot;, &quot;bat&quot;, &quot;dog&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "a", "b", "c" ]
-</span><span class='line'>a.delete_if {|x| x &gt;= "b" }   #=&gt; ["a"]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">delete_if</span> <span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="s2">&quot;b&quot;</span> <span class="p">}</span>   <span class="c1">#=&gt; [&quot;a&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>reject {|item| block } → new_ary
-</span><span class='line'>reject → an_enumerator</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">reject</span> <span class="p">{</span><span class="o">|</span><span class="n">item</span><span class="o">|</span> <span class="n">block</span> <span class="p">}</span> <span class="err">→</span> <span class="n">new_ary</span>
+</span><span class='line'><span class="n">reject</span> <span class="err">→</span> <span class="n">an_enumerator</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Returns a new array containing the items in self for which the block is not true. See also <code>Array#delete_if</code></p>
 
 <p>If no block is given, an enumerator is returned instead.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>reject! {|item| block } → ary or nil click to toggle source
-</span><span class='line'>reject! → an_enumerator</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">reject!</span> <span class="p">{</span><span class="o">|</span><span class="n">item</span><span class="o">|</span> <span class="n">block</span> <span class="p">}</span> <span class="err">→</span> <span class="n">ary</span> <span class="ow">or</span> <span class="kp">nil</span> <span class="n">click</span> <span class="n">to</span> <span class="n">toggle</span> <span class="n">source</span>
+</span><span class='line'><span class="n">reject!</span> <span class="err">→</span> <span class="n">an_enumerator</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Equivalent to <code>Array#delete_if</code>, deleting elements from self for which the block evaluates to true, but returns nil if no changes were made. The array is changed instantly every time the block is called and not after the iteration is over. See also Enumerable#reject and Array#delete_if.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = %w{ a b c d }
-</span><span class='line'>a.insert(2, 99)         #=&gt; ["a", "b", 99, "c", "d"]
-</span><span class='line'>a.insert(-2, 1, 2, 3)   #=&gt; ["a", "b", 99, "c", 1, 2, 3, "d"]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="sx">%w{ a b c d }</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span>         <span class="c1">#=&gt; [&quot;a&quot;, &quot;b&quot;, 99, &quot;c&quot;, &quot;d&quot;]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>   <span class="c1">#=&gt; [&quot;a&quot;, &quot;b&quot;, 99, &quot;c&quot;, 1, 2, 3, &quot;d&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "a", "b", "c" ]
-</span><span class='line'>a.slice!(1)     #=&gt; "b"
-</span><span class='line'>a               #=&gt; ["a", "c"]
-</span><span class='line'>a.slice!(-1)    #=&gt; "c"
-</span><span class='line'>a               #=&gt; ["a"]
-</span><span class='line'>a.slice!(100)   #=&gt; nil
-</span><span class='line'>a               #=&gt; ["a"]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">slice!</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>     <span class="c1">#=&gt; &quot;b&quot;</span>
+</span><span class='line'><span class="n">a</span>               <span class="c1">#=&gt; [&quot;a&quot;, &quot;c&quot;]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">slice!</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>    <span class="c1">#=&gt; &quot;c&quot;</span>
+</span><span class='line'><span class="n">a</span>               <span class="c1">#=&gt; [&quot;a&quot;]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">slice!</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>   <span class="c1">#=&gt; nil</span>
+</span><span class='line'><span class="n">a</span>               <span class="c1">#=&gt; [&quot;a&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "a", "b", "c", "d" ]
-</span><span class='line'>a.pop     #=&gt; "d"
-</span><span class='line'>a.pop(2)  #=&gt; ["b", "c"]
-</span><span class='line'>a         #=&gt; ["a"]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">pop</span>     <span class="c1">#=&gt; &quot;d&quot;</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1">#=&gt; [&quot;b&quot;, &quot;c&quot;]</span>
+</span><span class='line'><span class="n">a</span>         <span class="c1">#=&gt; [&quot;a&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "a", "b", "c" ]
-</span><span class='line'>a.push("d", "e", "f") #=&gt; ["a", "b", "c", "d", "e", "f"]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">)</span> <span class="c1">#=&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>args = [ "-m", "-q", "filename" ]
-</span><span class='line'>args.shift     #=&gt; "-m"
-</span><span class='line'>args           #=&gt; ["-q", "filename"]</span></code></pre></td></tr></table></div></figure>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>args = [ "-m", "-q", "filename" ]
-</span><span class='line'>args.shift(2)  #=&gt; ["-m", "-q"]
-</span><span class='line'>args           #=&gt; ["filename"]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">args</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;-m&quot;</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">,</span> <span class="s2">&quot;filename&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">args</span><span class="o">.</span><span class="n">shift</span>     <span class="c1">#=&gt; &quot;-m&quot;</span>
+</span><span class='line'><span class="n">args</span>           <span class="c1">#=&gt; [&quot;-q&quot;, &quot;filename&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">args</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;-m&quot;</span><span class="p">,</span> <span class="s2">&quot;-q&quot;</span><span class="p">,</span> <span class="s2">&quot;filename&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">args</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1">#=&gt; [&quot;-m&quot;, &quot;-q&quot;]</span>
+</span><span class='line'><span class="n">args</span>           <span class="c1">#=&gt; [&quot;filename&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>变换</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "a", "b", "c", "d" ]
-</span><span class='line'>a.collect {|x| x + "!" }   #=&gt; ["a!", "b!", "c!", "d!"]
-</span><span class='line'>a                          #=&gt; ["a", "b", "c", "d"]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">collect</span> <span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span> <span class="p">}</span>   <span class="c1">#=&gt; [&quot;a!&quot;, &quot;b!&quot;, &quot;c!&quot;, &quot;d!&quot;]</span>
+</span><span class='line'><span class="n">a</span>                          <span class="c1">#=&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "a", "b", "c", "d" ]
-</span><span class='line'>a.collect! {|x| x + "!" }
-</span><span class='line'>a             #=&gt;  [ "a!", "b!", "c!", "d!" ]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">collect!</span> <span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span> <span class="p">}</span>
+</span><span class='line'><span class="n">a</span>             <span class="c1">#=&gt;  [ &quot;a!&quot;, &quot;b!&quot;, &quot;c!&quot;, &quot;d!&quot; ]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p><code>collect</code>等效于<code>map</code></p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[ "a", "b" ].concat( ["c", "d"] ) #=&gt; [ "a", "b", "c", "d" ]</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="o">].</span><span class="n">concat</span><span class="p">(</span> <span class="o">[</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="o">]</span> <span class="p">)</span> <span class="c1">#=&gt; [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot; ]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[ "a", "b", "c" ].join        #=&gt; "abc"
-</span><span class='line'>[ "a", "b", "c" ].join("-")   #=&gt; "a-b-c"</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">].</span><span class="n">join</span>        <span class="c1">#=&gt; &quot;abc&quot;</span>
+</span><span class='line'><span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">].</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>   <span class="c1">#=&gt; &quot;a-b-c&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[ "a", "b", "c" ].reverse   #=&gt; ["c", "b", "a"]</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">].</span><span class="n">reverse</span>   <span class="c1">#=&gt; [&quot;c&quot;, &quot;b&quot;, &quot;a&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "a", "b", "c" ]
-</span><span class='line'>a.reverse!       #=&gt; ["c", "b", "a"]
-</span><span class='line'>a                #=&gt; ["c", "b", "a"]</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "d", "a", "e", "c", "b" ]
-</span><span class='line'>a.sort                    #=&gt; ["a", "b", "c", "d", "e"]
-</span><span class='line'>a.sort {|x,y| y &lt;=&gt; x }   #=&gt; ["e", "d", "c", "b", "a"]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">reverse!</span>       <span class="c1">#=&gt; [&quot;c&quot;, &quot;b&quot;, &quot;a&quot;]</span>
+</span><span class='line'><span class="n">a</span>                <span class="c1">#=&gt; [&quot;c&quot;, &quot;b&quot;, &quot;a&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "a", "a", "b", "b", "c" ]
-</span><span class='line'>a.uniq   # =&gt; ["a", "b", "c"]</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">sort</span>                    <span class="c1">#=&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">sort</span> <span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">|</span> <span class="n">y</span> <span class="o">&lt;=&gt;</span> <span class="n">x</span> <span class="p">}</span>   <span class="c1">#=&gt; [&quot;e&quot;, &quot;d&quot;, &quot;c&quot;, &quot;b&quot;, &quot;a&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>b = [["student","sam"], ["student","george"], ["teacher","matz"]]
-</span><span class='line'>b.uniq { |s| s.first } # =&gt; [["student", "sam"], ["teacher", "matz"]]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">uniq</span>   <span class="c1"># =&gt; [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">b</span> <span class="o">=</span> <span class="o">[[</span><span class="s2">&quot;student&quot;</span><span class="p">,</span><span class="s2">&quot;sam&quot;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="s2">&quot;student&quot;</span><span class="p">,</span><span class="s2">&quot;george&quot;</span><span class="o">]</span><span class="p">,</span> <span class="o">[</span><span class="s2">&quot;teacher&quot;</span><span class="p">,</span><span class="s2">&quot;matz&quot;</span><span class="o">]]</span>
+</span><span class='line'><span class="n">b</span><span class="o">.</span><span class="n">uniq</span> <span class="p">{</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span> <span class="n">s</span><span class="o">.</span><span class="n">first</span> <span class="p">}</span> <span class="c1"># =&gt; [[&quot;student&quot;, &quot;sam&quot;], [&quot;teacher&quot;, &quot;matz&quot;]]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>统计与查询</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ary = [1, 2, 4, 2]
-</span><span class='line'>ary.count             #=&gt; 4
-</span><span class='line'>ary.count(2)          #=&gt; 2
-</span><span class='line'>ary.count{|x|x%2==0}  #=&gt; 3</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">ary</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="o">]</span>
+</span><span class='line'><span class="n">ary</span><span class="o">.</span><span class="n">count</span>             <span class="c1">#=&gt; 4</span>
+</span><span class='line'><span class="n">ary</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>          <span class="c1">#=&gt; 2</span>
+</span><span class='line'><span class="n">ary</span><span class="o">.</span><span class="n">count</span><span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span><span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">}</span>  <span class="c1">#=&gt; 3</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "a", "b", "c" ]
-</span><span class='line'>a.include?("b")   #=&gt; true
-</span><span class='line'>a.include?("z")   #=&gt; false</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>   <span class="c1">#=&gt; true</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">)</span>   <span class="c1">#=&gt; false</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[ 1, 2, 3, 4, 5 ].length   #=&gt; 5</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="o">].</span><span class="n">length</span>   <span class="c1">#=&gt; 5</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = %w{ a b c d e f }
-</span><span class='line'>a.select {|v| v =~ /[aeiou]/}   #=&gt; ["a", "e"]</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="sx">%w{ a b c d e f }</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span><span class="o">|</span><span class="n">v</span><span class="o">|</span> <span class="n">v</span> <span class="o">=~</span> <span class="sr">/[aeiou]/</span><span class="p">}</span>   <span class="c1">#=&gt; [&quot;a&quot;, &quot;e&quot;]</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[].empty?   #=&gt; true</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">[].</span><span class="n">empty?</span>   <span class="c1">#=&gt; true</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>其它</h3>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "a", "b", "c" ]
-</span><span class='line'>a.each {|x| puts x }</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">x</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "a", "b", "c" ]
-</span><span class='line'>a.each_index {|x| puts x } # passes the index of the element instead of the element itself</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">a</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="n">a</span><span class="o">.</span><span class="n">each_index</span> <span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">x</span> <span class="p">}</span> <span class="c1"># passes the index of the element instead of the element itself</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>小结</h3>
