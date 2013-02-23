@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 51-Ruby | 世界的瞭望哨]]></title>
   <link href="http://chenkan.github.com/blog/categories/51-ruby/atom.xml" rel="self"/>
   <link href="http://chenkan.github.com/"/>
-  <updated>2013-02-22T12:52:56+08:00</updated>
+  <updated>2013-02-23T22:05:40+08:00</updated>
   <id>http://chenkan.github.com/</id>
   <author>
     <name><![CDATA[ChenKan]]></name>
@@ -12,6 +12,126 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby学习系列 - 基础知识 - Hash]]></title>
+    <link href="http://chenkan.github.com/blog/2013/02/23/ruby-study-hash/"/>
+    <updated>2013-02-23T21:56:00+08:00</updated>
+    <id>http://chenkan.github.com/blog/2013/02/23/ruby-study-hash</id>
+    <content type="html"><![CDATA[<h3>序言</h3>
+
+<p>这部分讲<code>Hash</code>，取材于<a href="http://www.ruby-doc.org/core-1.9.3/Hash.html">Ruby core API</a>，加以归纳整理，便于记忆</p>
+
+<h3>赋值</h3>
+
+<p><code>
+h = { "a" =&gt; 100, "b" =&gt; 200 }
+h["a"] = 9
+h["c"] = 4
+h   #=&gt; {"a"=&gt;9, "b"=&gt;200, "c"=&gt;4}
+</code></p>
+
+<h3>取值</h3>
+
+<p><code>
+h = { "a" =&gt; 100, "b" =&gt; 200 }
+h["a"]   #=&gt; 100
+h["c"]   #=&gt; nil
+</code>
+<code>
+h = { "a" =&gt; 100, "b" =&gt; 200, "c" =&gt; 300, "d" =&gt; 300 }
+h.key(200)   #=&gt; "b"
+h.key(300)   #=&gt; "c"
+h.key(999)   #=&gt; nil
+</code></p>
+
+<h3>运算</h3>
+
+<p>```
+h1 = { "a" => 100, "b" => 200 }
+h2 = { "b" => 254, "c" => 300 }
+h1.merge(h2)   #=> {"a"=>100, "b"=>254, "c"=>300}
+h1.merge(h2){|key, old_val, new_val| new_val - old_val}</p>
+
+<pre><code>           #=&gt; {"a"=&gt;100, "b"=&gt;54,  "c"=&gt;300}
+</code></pre>
+
+<p>h1             #=> {"a"=>100, "b"=>200}
+```</p>
+
+<h3>增减</h3>
+
+<p><code>
+h = { "a" =&gt; 100, "b" =&gt; 200 }
+h.delete("a")                              #=&gt; 100
+h.delete("z")                              #=&gt; nil
+</code>
+<code>
+h = { "a" =&gt; 100, "b" =&gt; 200, "c" =&gt; 300 }
+h.delete_if {|key, value| key &gt;= "b" }   #=&gt; {"a"=&gt;100}
+</code></p>
+
+<p><code>reject!</code> is equivalent to <code>Hash#delete_if</code>, but returns <code>nil</code> if no changes were made.</p>
+
+<h3>统计与查询</h3>
+
+<p><code>
+{}.empty?   #=&gt; true
+</code></p>
+
+<p><code>
+h = { "a" =&gt; 100, "b" =&gt; 200 }
+h.has_key?("a")   #=&gt; true
+h.has_key?("z")   #=&gt; false
+</code>
+<code>
+h = { "a" =&gt; 100, "b" =&gt; 200 }
+h.has_value?(100)   #=&gt; true
+h.has_value?(999)   #=&gt; false
+</code></p>
+
+<p><code>
+h = { "a" =&gt; 100, "b" =&gt; 200, "c" =&gt; 300, "d" =&gt; 400 }
+h.keys   #=&gt; ["a", "b", "c", "d"]
+</code>
+<code>
+h = { "a" =&gt; 100, "b" =&gt; 200, "c" =&gt; 300 }
+h.values   #=&gt; [100, 200, 300]
+</code></p>
+
+<p><code>
+h = { "d" =&gt; 100, "a" =&gt; 200, "v" =&gt; 300, "e" =&gt; 400 }
+h.length        #=&gt; 4
+h.delete("a")   #=&gt; 200
+h.length        #=&gt; 3
+</code></p>
+
+<p><code>
+h = { "a" =&gt; 100, "b" =&gt; 200, "c" =&gt; 300 }
+h.select {|k,v| k &gt; "a"}  #=&gt; {"b" =&gt; 200, "c" =&gt; 300}
+h.select {|k,v| v &lt; 200}  #=&gt; {"a" =&gt; 100}
+</code></p>
+
+<h3>其它</h3>
+
+<p><code>
+h = { "a" =&gt; 100, "b" =&gt; 200 }
+h.each {|key, value| puts "#{key} is #{value}" }
+</code>
+<code>
+h = { "a" =&gt; 100, "b" =&gt; 200 }
+h.each_key {|key| puts key }
+</code>
+<code>
+h = { "a" =&gt; 100, "b" =&gt; 200 }
+h.each_value {|value| puts value }
+</code></p>
+
+<h3>小结</h3>
+
+<p>以上为不完全统计，后续调整</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby学习系列 - 基础知识 - Array]]></title>

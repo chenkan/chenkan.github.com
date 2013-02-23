@@ -9,7 +9,14 @@
   <meta name="author" content="ChenKan">
 
   
-  <meta name="description" content="本文算是最近工作中的一些感悟与吐槽 话说本人是互联网行业QA一枚，精确一点叫测试开发，测试中的开发（很遗憾不是战斗机==！） 也许大家在用脚本执行测试，在用Jenkins执行自动用例，在用testlink管理用例，在用JIRA管理Bug，etc。但终有一天，随着业务的发展，一个集中而不失灵活， &hellip;">
+  <meta name="description" content="序言 这部分讲Hash，取材于Ruby core API，加以归纳整理，便于记忆 赋值 1
+2
+3
+4
+h = { "a" =&gt; 100, "b" =&gt; 200 }
+h["a"] = 9
+h["c"] = 4
+h #=&gt; {"a"=&gt;9, "b"=&gt;200, "c &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +83,194 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/02/23/ruby-study-hash/">Ruby学习系列 - 基础知识 - Hash</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-23T21:56:00+08:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>序言</h3>
+
+<p>这部分讲<code>Hash</code>，取材于<a href="http://www.ruby-doc.org/core-1.9.3/Hash.html">Ruby core API</a>，加以归纳整理，便于记忆</p>
+
+<h3>赋值</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
+</span><span class='line'>h["a"] = 9
+</span><span class='line'>h["c"] = 4
+</span><span class='line'>h   #=&gt; {"a"=&gt;9, "b"=&gt;200, "c"=&gt;4}</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>取值</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
+</span><span class='line'>h["a"]   #=&gt; 100
+</span><span class='line'>h["c"]   #=&gt; nil</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200, "c" =&gt; 300, "d" =&gt; 300 }
+</span><span class='line'>h.key(200)   #=&gt; "b"
+</span><span class='line'>h.key(300)   #=&gt; "c"
+</span><span class='line'>h.key(999)   #=&gt; nil</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>运算</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h1 = { "a" =&gt; 100, "b" =&gt; 200 }
+</span><span class='line'>h2 = { "b" =&gt; 254, "c" =&gt; 300 }
+</span><span class='line'>h1.merge(h2)   #=&gt; {"a"=&gt;100, "b"=&gt;254, "c"=&gt;300}
+</span><span class='line'>h1.merge(h2){|key, old_val, new_val| new_val - old_val}
+</span><span class='line'>               #=&gt; {"a"=&gt;100, "b"=&gt;54,  "c"=&gt;300}
+</span><span class='line'>h1             #=&gt; {"a"=&gt;100, "b"=&gt;200}</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>增减</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
+</span><span class='line'>h.delete("a")                              #=&gt; 100
+</span><span class='line'>h.delete("z")                              #=&gt; nil</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200, "c" =&gt; 300 }
+</span><span class='line'>h.delete_if {|key, value| key &gt;= "b" }   #=&gt; {"a"=&gt;100}</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>reject!</code> is equivalent to <code>Hash#delete_if</code>, but returns <code>nil</code> if no changes were made.</p>
+
+<h3>统计与查询</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>{}.empty?   #=&gt; true</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
+</span><span class='line'>h.has_key?("a")   #=&gt; true
+</span><span class='line'>h.has_key?("z")   #=&gt; false</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
+</span><span class='line'>h.has_value?(100)   #=&gt; true
+</span><span class='line'>h.has_value?(999)   #=&gt; false</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200, "c" =&gt; 300, "d" =&gt; 400 }
+</span><span class='line'>h.keys   #=&gt; ["a", "b", "c", "d"]</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200, "c" =&gt; 300 }
+</span><span class='line'>h.values   #=&gt; [100, 200, 300]</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "d" =&gt; 100, "a" =&gt; 200, "v" =&gt; 300, "e" =&gt; 400 }
+</span><span class='line'>h.length        #=&gt; 4
+</span><span class='line'>h.delete("a")   #=&gt; 200
+</span><span class='line'>h.length        #=&gt; 3</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200, "c" =&gt; 300 }
+</span><span class='line'>h.select {|k,v| k &gt; "a"}  #=&gt; {"b" =&gt; 200, "c" =&gt; 300}
+</span><span class='line'>h.select {|k,v| v &lt; 200}  #=&gt; {"a" =&gt; 100}</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>其它</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
+</span><span class='line'>h.each {|key, value| puts "#{key} is #{value}" }</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
+</span><span class='line'>h.each_key {|key| puts key }</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h = { "a" =&gt; 100, "b" =&gt; 200 }
+</span><span class='line'>h.each_value {|value| puts value }</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>小结</h3>
+
+<p>以上为不完全统计，后续调整</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -606,6 +801,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/02/23/ruby-study-hash/">Ruby学习系列 - 基础知识 - Hash</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/02/21/gua-shou-di-luo/">瓜熟才可蒂落</a>
       </li>
     
@@ -624,7 +823,7 @@
   <ul id="categories">
     <li class='category'><a href='/blog/categories/00-za-tan/'>00-杂谈 (1)</a></li>
 <li class='category'><a href='/blog/categories/01-gong-zuo-gan-xiang/'>01-工作感想 (1)</a></li>
-<li class='category'><a href='/blog/categories/51-ruby/'>51-Ruby (1)</a></li>
+<li class='category'><a href='/blog/categories/51-ruby/'>51-Ruby (2)</a></li>
 
   </ul>
 </section>
