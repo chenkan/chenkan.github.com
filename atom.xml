@@ -4,7 +4,7 @@
   <title><![CDATA[世界的瞭望哨]]></title>
   <link href="http://chenkan.github.com/atom.xml" rel="self"/>
   <link href="http://chenkan.github.com/"/>
-  <updated>2013-02-23T22:05:40+08:00</updated>
+  <updated>2013-02-23T22:17:21+08:00</updated>
   <id>http://chenkan.github.com/</id>
   <author>
     <name><![CDATA[ChenKan]]></name>
@@ -265,6 +265,38 @@
 </span><span class='line'>a[1..-1] = []               #=&gt; ["A"]</span></code></pre></td></tr></table></div></figure>
 
 
+<h3>取值</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "a", "b", "c", "d", "e" ]
+</span><span class='line'>a[1, 2]                #=&gt; [ "b", "c" ]
+</span><span class='line'>a[1..3]                #=&gt; [ "b", "c", "d" ]
+</span><span class='line'>a[-3, 3]               #=&gt; [ "c", "d", "e" ]</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "q", "r", "s", "t" ]
+</span><span class='line'>a.first     #=&gt; "q"
+</span><span class='line'>a.first(2)  #=&gt; ["q", "r"]</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "w", "x", "y", "z" ]
+</span><span class='line'>a.last     #=&gt; "z"
+</span><span class='line'>a.last(2)  #=&gt; ["y", "z"]</span></code></pre></td></tr></table></div></figure>
+
+
 <h3>运算</h3>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -391,38 +423,6 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>args = [ "-m", "-q", "filename" ]
 </span><span class='line'>args.shift(2)  #=&gt; ["-m", "-q"]
 </span><span class='line'>args           #=&gt; ["filename"]</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>取值</h3>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "a", "b", "c", "d", "e" ]
-</span><span class='line'>a[1, 2]                #=&gt; [ "b", "c" ]
-</span><span class='line'>a[1..3]                #=&gt; [ "b", "c", "d" ]
-</span><span class='line'>a[-3, 3]               #=&gt; [ "c", "d", "e" ]</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "q", "r", "s", "t" ]
-</span><span class='line'>a.first     #=&gt; "q"
-</span><span class='line'>a.first(2)  #=&gt; ["q", "r"]</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = [ "w", "x", "y", "z" ]
-</span><span class='line'>a.last     #=&gt; "z"
-</span><span class='line'>a.last(2)  #=&gt; ["y", "z"]</span></code></pre></td></tr></table></div></figure>
 
 
 <h3>变换</h3>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 51-Ruby | 世界的瞭望哨]]></title>
   <link href="http://chenkan.github.com/blog/categories/51-ruby/atom.xml" rel="self"/>
   <link href="http://chenkan.github.com/"/>
-  <updated>2013-02-23T22:05:40+08:00</updated>
+  <updated>2013-02-23T22:17:21+08:00</updated>
   <id>http://chenkan.github.com/</id>
   <author>
     <name><![CDATA[ChenKan]]></name>
@@ -170,6 +170,27 @@ a[1..-1] = nil              #=&gt; ["A", nil]
 a[1..-1] = []               #=&gt; ["A"]
 </code></p>
 
+<h3>取值</h3>
+
+<p><code>
+a = [ "a", "b", "c", "d", "e" ]
+a[1, 2]                #=&gt; [ "b", "c" ]
+a[1..3]                #=&gt; [ "b", "c", "d" ]
+a[-3, 3]               #=&gt; [ "c", "d", "e" ]
+</code></p>
+
+<p><code>
+a = [ "q", "r", "s", "t" ]
+a.first     #=&gt; "q"
+a.first(2)  #=&gt; ["q", "r"]
+</code></p>
+
+<p><code>
+a = [ "w", "x", "y", "z" ]
+a.last     #=&gt; "z"
+a.last(2)  #=&gt; ["y", "z"]
+</code></p>
+
 <h3>运算</h3>
 
 <p><code>
@@ -252,27 +273,6 @@ args           #=&gt; ["-q", "filename"]
 args = [ "-m", "-q", "filename" ]
 args.shift(2)  #=&gt; ["-m", "-q"]
 args           #=&gt; ["filename"]
-</code></p>
-
-<h3>取值</h3>
-
-<p><code>
-a = [ "a", "b", "c", "d", "e" ]
-a[1, 2]                #=&gt; [ "b", "c" ]
-a[1..3]                #=&gt; [ "b", "c", "d" ]
-a[-3, 3]               #=&gt; [ "c", "d", "e" ]
-</code></p>
-
-<p><code>
-a = [ "q", "r", "s", "t" ]
-a.first     #=&gt; "q"
-a.first(2)  #=&gt; ["q", "r"]
-</code></p>
-
-<p><code>
-a = [ "w", "x", "y", "z" ]
-a.last     #=&gt; "z"
-a.last(2)  #=&gt; ["y", "z"]
 </code></p>
 
 <h3>变换</h3>
