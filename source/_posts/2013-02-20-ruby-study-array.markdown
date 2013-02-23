@@ -8,7 +8,7 @@ categories: 51-Ruby
 
 ### 序言
 
-本着赶鸭子上架及边学边做的精神，总也算是写了好一些Ruby代码；但回过头来发现自己的进步不大，写代码还是很生涩，不上道，经常在基础知识上摔跟头
+本着赶鸭子上架及边学边做的精神，总也算是写了好一些Ruby代码；但回过头来发现自己的进步不大，写代码还是很生涩，不上道，多次在基础知识上摔跟头
 
 新的一年开始了，希望自己能够扎实掌握Ruby这项技能，从基础开始，梳理一些知识点
 
@@ -18,7 +18,7 @@ categories: 51-Ruby
 
 If multiple copies are what you want, you should use the block version which uses the result of that block each time an element of the array needs to be initialized:
 
-```
+``` ruby
 a = Array.new(2) { Hash.new }
 a[0]['cat'] = 'feline'
 a # => [{"cat"=>"feline"}, {}]
