@@ -4,7 +4,7 @@
   <title><![CDATA[世界的瞭望哨]]></title>
   <link href="http://chenkan.github.com/atom.xml" rel="self"/>
   <link href="http://chenkan.github.com/"/>
-  <updated>2013-02-23T23:04:45+08:00</updated>
+  <updated>2013-02-24T11:22:21+08:00</updated>
   <id>http://chenkan.github.com/</id>
   <author>
     <name><![CDATA[ChenKan]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Http接口测试框架架构设想]]></title>
+    <link href="http://chenkan.github.com/blog/2013/02/24/http-test-framework/"/>
+    <updated>2013-02-24T10:58:00+08:00</updated>
+    <id>http://chenkan.github.com/blog/2013/02/24/http-test-framework</id>
+    <content type="html"><![CDATA[<h3>序言</h3>
+
+<p>按照惯例，谷歌了几个来回，没找到合适的开源框架</p>
+
+<p>于是乎，自己折腾一个！？</p>
+
+<h3>框架要点</h3>
+
+<ol>
+<li>是否易于上手，学习和迁移成本要低，要不然潜在用户手头上一堆旧用例怎么愿意换框架呢</li>
+<li>可以以尽量少的代码写出丰富用例来，这一点我现在认为是非常重要的；代码越少，用例本身越清晰明了，写得时候轻松自如，code review及以后维护起来也是大大的方便；这种精简，可以通过框架提供简单优雅的API实现，也可以通过设计一个灵活而不失强大的数据驱动模型实现，也可以通过合理封装被测试产品的业务逻辑实现；实践表明，写测试用例的时候，是非常容易出现冗余代码的，如何消除这种冗余，是个关键问题</li>
+<li>框架本身的代码也要精简，原理基本同上</li>
+<li>框架要灵活，不能因为框架而把大家写用例的思路限制住；产品各不相同，业务千差万别，测试人员也各具特长，写出来的用例大一统，不现实，也不该</li>
+<li>一个比较激进的设想，使用Ruby来架构及写用例；与Java相较，Ruby天然具有灵活性和精简性；但是要迁移语言体系，风险与收益共存</li>
+</ol>
+
+
+<h3>框架模块</h3>
+
+<ol>
+<li>HttpClient封装，可自己封装，也可采用优秀库</li>
+<li>断言封装，可自己封装，也可采用优秀库，例如：直接使用TestNg</li>
+<li>测试数据组织形式，xml？excel？写在代码里？</li>
+<li>业务逻辑相关封装</li>
+<li>用例组织与执行，不出意外，采用现成框架即可，例如：TestNg</li>
+</ol>
+
+
+<p>其中第三第四点很难把握，直接关系到大家如何设计和架构测试用例，以及是否方便使用这个框架写用例和维护用例</p>
+
+<p>尤其是第四点，倾向于由实际用例编写人自主设计</p>
+
+<h3>小调查</h3>
+
+<p>在周边人群中进行了一次小调查，如图所示</p>
+
+<p><img src="https://raw.github.com/chenkan/Pictures/master/blog/http-test.jpg" alt="小调查" /></p>
+
+<h3>尝试</h3>
+
+<p>利用业余时间在使用Ruby进行折腾，请看<a href="https://github.com/chenkan/Falcon">这里</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ruby学习系列 - 基础知识 - Hash]]></title>

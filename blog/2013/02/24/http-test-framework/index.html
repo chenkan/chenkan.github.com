@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>新博启用 - 世界的瞭望哨</title>
+  <title>Http接口测试框架架构设想 - 世界的瞭望哨</title>
   <meta name="author" content="ChenKan">
 
   
-  <meta name="description" content="由于原博客在功能和形式上都不能很好符合我的需求，再加上我爱折腾的怪癖，终于决定启用此博客 本博客立志于 认识自己 认识世界 但在达成这一宏愿之前，将主要发布与我当前职业（一名有态度，爱折腾的QA）相关的文章；同时，也会陆续从原博客整理、搬运一批文章过来 本博客依托于Github， &hellip;">
+  <meta name="description" content="序言 按照惯例，谷歌了几个来回，没找到合适的开源框架 于是乎，自己折腾一个！？ 框架要点 是否易于上手，学习和迁移成本要低，要不然潜在用户手头上一堆旧用例怎么愿意换框架呢
+可以以尽量少的代码写出丰富用例来，这一点我现在认为是非常重要的；代码越少，用例本身越清晰明了，写得时候轻松自如，code &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://chenkan.github.com/blog/2013/02/07/xin-bo-qi-yong/">
+  <link rel="canonical" href="http://chenkan.github.com/blog/2013/02/24/http-test-framework/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -79,7 +80,7 @@
   
   <header>
     
-      <h1 class="entry-title">新博启用</h1>
+      <h1 class="entry-title">Http接口测试框架架构设想</h1>
     
     
       <p class="meta">
@@ -95,30 +96,54 @@
   
 
 
-<time datetime="2013-02-07T16:09:00+08:00" pubdate data-updated="true">Feb 7<span>th</span>, 2013</time>
+<time datetime="2013-02-24T10:58:00+08:00" pubdate data-updated="true">Feb 24<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>由于<a href="http://ckbsc.blog.163.com/">原博客</a>在功能和形式上都不能很好符合我的需求，再加上我爱折腾的怪癖，终于决定启用此博客</p>
+<div class="entry-content"><h3>序言</h3>
 
-<p>本博客立志于</p>
+<p>按照惯例，谷歌了几个来回，没找到合适的开源框架</p>
 
-<blockquote><p>认识自己 认识世界</p></blockquote>
+<p>于是乎，自己折腾一个！？</p>
 
-<p>但在达成这一宏愿之前，将主要发布与我当前职业（一名有态度，爱折腾的QA）相关的文章；同时，也会陆续从原博客整理、搬运一批文章过来</p>
-
-<p>本博客依托于<a href="github.com">Github</a>，使用<a href="octopress.org">octopress</a>搭建博客，期间参考了</p>
+<h3>框架要点</h3>
 
 <ol>
-<li>如何知道了<code>octopress</code>这玩意 <a href="http://www.v2ex.com/t/51573#reply24">传送门</a></li>
-<li><code>octopress</code>官网指南 <a href="http://octopress.org/">传送门</a></li>
-<li><code>octopress</code>简单使用，内容类似官网指南，但更具体一些 <a href="http://tanqisen.github.com/blog/2012/12/27/github-plus-octopressda-jian-mian-fei-blog/">传送门</a></li>
-<li>如何使<code>octopress</code>支持中文分类标签 <a href="http://khaos.github.com/blog/2012/12/06/using-chinese-category-tags-in-octopress/">传送门</a></li>
+<li>是否易于上手，学习和迁移成本要低，要不然潜在用户手头上一堆旧用例怎么愿意换框架呢</li>
+<li>可以以尽量少的代码写出丰富用例来，这一点我现在认为是非常重要的；代码越少，用例本身越清晰明了，写得时候轻松自如，code review及以后维护起来也是大大的方便；这种精简，可以通过框架提供简单优雅的API实现，也可以通过设计一个灵活而不失强大的数据驱动模型实现，也可以通过合理封装被测试产品的业务逻辑实现；实践表明，写测试用例的时候，是非常容易出现冗余代码的，如何消除这种冗余，是个关键问题</li>
+<li>框架本身的代码也要精简，原理基本同上</li>
+<li>框架要灵活，不能因为框架而把大家写用例的思路限制住；产品各不相同，业务千差万别，测试人员也各具特长，写出来的用例大一统，不现实，也不该</li>
+<li>一个比较激进的设想，使用Ruby来架构及写用例；与Java相较，Ruby天然具有灵活性和精简性；但是要迁移语言体系，风险与收益共存</li>
 </ol>
 
+
+<h3>框架模块</h3>
+
+<ol>
+<li>HttpClient封装，可自己封装，也可采用优秀库</li>
+<li>断言封装，可自己封装，也可采用优秀库，例如：直接使用TestNg</li>
+<li>测试数据组织形式，xml？excel？写在代码里？</li>
+<li>业务逻辑相关封装</li>
+<li>用例组织与执行，不出意外，采用现成框架即可，例如：TestNg</li>
+</ol>
+
+
+<p>其中第三第四点很难把握，直接关系到大家如何设计和架构测试用例，以及是否方便使用这个框架写用例和维护用例</p>
+
+<p>尤其是第四点，倾向于由实际用例编写人自主设计</p>
+
+<h3>小调查</h3>
+
+<p>在周边人群中进行了一次小调查，如图所示</p>
+
+<p><img src="https://raw.github.com/chenkan/Pictures/master/blog/http-test.jpg" alt="小调查" /></p>
+
+<h3>尝试</h3>
+
+<p>利用业余时间在使用Ruby进行折腾，请看<a href="https://github.com/chenkan/Falcon">这里</a></p>
 </div>
 
 
@@ -141,12 +166,12 @@
   
 
 
-<time datetime="2013-02-07T16:09:00+08:00" pubdate data-updated="true">Feb 7<span>th</span>, 2013</time>
+<time datetime="2013-02-24T10:58:00+08:00" pubdate data-updated="true">Feb 24<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/00-za-tan/'>00-杂谈</a>
+    <a class='category' href='/blog/categories/61-zi-dong-hua-ce-shi/'>61-自动化测试</a>
   
 </span>
 
@@ -176,8 +201,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2013/02/23/ruby-study-hash/" title="Previous Post: Ruby学习系列 - 基础知识 - Hash">&laquo; Ruby学习系列 - 基础知识 - Hash</a>
       
-        <a class="basic-alignment right" href="/blog/2013/02/20/ruby-study-array/" title="Next Post: Ruby学习系列 - 基础知识 - Array">Ruby学习系列 - 基础知识 - Array &raquo;</a>
       
     </p>
   </footer>
